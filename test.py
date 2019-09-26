@@ -28,7 +28,7 @@ while bol :
         if luck not in r:
             luck = int(input("Your choice is wrong, please enter a number from 1 to 6 : "))
         elif luck not in catch:
-            print("Good luck you scaped from the ghost )
+            print("Good luck you scaped from the ghost" )
             break
         elif luck in catch: 
             print ("Hard luck the ghost chatched you.....!")
