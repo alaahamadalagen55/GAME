@@ -30,19 +30,29 @@ def master():
     bol = True
     while bol:
         catch = ghost()
-        print("catch : ", catch)
-        luck = int(input("Enter a number from 1 to 6 : "))
+        luck = input("Enter a number from 1 to 6 : ")
+        check = "123456"
+        while True:
+            if luck in check:
+                luck = int(luck)
+                break
+            else:
+                luck = input("wrong, Enter a number from 1 to 6 : ")
         r = range(1, 7)
         while bol:
-            if luck not in r:
-                luck = int(input("wrong,please enter a number from 1 to 6 : "))
-            elif luck not in catch:
+            if luck not in catch:
                 print("Good luck you scaped from the ghost")
                 break
             elif luck in catch:
                 print("Hard luck the ghost chatched you.....!")
                 break
-        end = int(input("If you want to play again pree 1, or 0 to exit : "))
+        end = input("If you want to play again pree 1, or 0 to exit : ")
+        while True:
+            if end == "0" or end == "1":
+                end = int(end)
+                break
+            else:
+                end = input("wrong, to play again pree 1, or 0 to exit : ")
         fine = True
         while fine:
             if end == 0:
@@ -58,5 +68,6 @@ def master():
                 end = int(input("to play again press 1, or 0 to exit : "))
         if(end == 0):
             break
+
 
 master()
