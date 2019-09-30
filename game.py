@@ -14,18 +14,23 @@ def conditions():
     time_Pause("try your luck to scape from these ghosts\nLet's START !!\n\n")
 
 
+def ghost():
+    x = random.randint(1, 6)
+    y = random.randint(1, 6)
+    z = random.randint(1, 6)
+    while (x == y or x == z or y == z):
+        x = random.randint(1, 6)
+        y = random.randint(1, 6)
+        z = random.randint(1, 6)
+    return [x, y, z]
+
+
 def master():
     conditions()
     bol = True
     while bol:
-        x = random.randint(1, 6)
-        y = random.randint(1, 6)
-        z = random.randint(1, 6)
-        while (x == y or x == z or y == z):
-            x = random.randint(1, 6)
-            y = random.randint(1, 6)
-            z = random.randint(1, 6)
-        catch = [x, y, z]
+        catch = ghost()
+        print("catch : ", catch)
         luck = int(input("Enter a number from 1 to 6 : "))
         r = range(1, 7)
         while bol:
