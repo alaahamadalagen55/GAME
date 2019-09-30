@@ -64,10 +64,6 @@ def master():
                 bol = True
                 fine = False
                 break
-            else:
-                end = int(input("to play again press 1, or 0 to exit : "))
-        if(end == 0):
-            break
 
 
 master()
